@@ -1,8 +1,8 @@
 {
   "name": "electron-template",
   "productName": "electron-template",
-  "version": "1.0.0",
-  "description": "My Electron application description",
+  "version": "0.0.0",
+  "description": "Electron application",
   "main": ".webpack/main",
   "scripts": {
     "start": "electron-forge start",
@@ -11,7 +11,11 @@
     "publish": "electron-forge publish",
     "lint": "echo \"No linting configured\""
   },
-  "keywords": [],
+  "keywords": [
+    "electron",
+    "webpack",
+    "react"
+  ],
   "author": {
     "name": "MinjaeKim",
     "email": "openkmj@gmail.com"
@@ -40,6 +44,16 @@
         {
           "name": "@electron-forge/maker-rpm",
           "config": {}
+        }
+      ],
+      "publishers": [
+        {
+          "name": "@electron-forge/publisher-s3",
+          "config": {
+            "bucket": "bucket",
+            "region": "region",
+            "public": true
+          }
         }
       ],
       "plugins": [
@@ -74,6 +88,7 @@
     "@electron-forge/maker-squirrel": "^6.0.0-beta.64",
     "@electron-forge/maker-zip": "^6.0.0-beta.64",
     "@electron-forge/plugin-webpack": "^6.0.0-beta.64",
+    "@electron-forge/publisher-s3": "^6.0.0-beta.64",
     "@vercel/webpack-asset-relocator-loader": "^1.7.0",
     "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
