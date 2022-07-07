@@ -26,20 +26,20 @@
  * ```
  */
 
-import "./index.css";
+import './index.css'
 
-import React from "react";
-import { createRoot } from "react-dom/client";
-import App from "./App.jsx";
+import React from 'react'
+import { createRoot } from 'react-dom/client'
+import App from './App.jsx'
 
 function render() {
-  const container = document.getElementById("app");
-  const root = createRoot(container);
-  root.render(<App />);
+  const container = document.getElementById('app')
+  const root = createRoot(container)
+  root.render(<App />)
 }
 
-render();
+render()
 
 console.log(
   '👋 This message is being logged by "renderer.js", included via webpack'
-);
+)
